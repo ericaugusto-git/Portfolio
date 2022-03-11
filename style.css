@@ -1,0 +1,122 @@
+body{
+    background-image: url("imgs/koi-wallpaper.png");
+    height: 100vh;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    background-color: #06213e;
+}
+
+#desktop-icons button{
+    width: 80px;
+    height: 80px;
+    background: none;
+    background-size: contain;
+    transition: transform .2s;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+
+button#about-me{
+    background-image: url("imgs/btn-imgs/about-me.png");
+}
+button#contact{
+    background-image: url("imgs/btn-imgs/contact.png");
+}
+button#projects{
+    background-image: url("imgs/btn-imgs/projects.png");
+}
+button#resume{
+    background-image: url("imgs/btn-imgs/resume.png");
+}
+
+#footer button{
+    height: 30px;
+    width: 133px;
+    display: block;
+    background-image: url("imgs/start.png");
+}
+
+#desktop-icons button:hover{
+    transform: scale(1.1);
+    
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+#modal-body a{
+    text-decoration: none;
+}
+.start_menu {
+    border-style: groove;
+    height: 320px;
+    width: 180px;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    font-size: 18px;
+    background-image: url("imgs/start-menu/background.png");
+  }
+
+  .start_menu button{
+      margin-left: 30px;
+      height: 46px;
+      background: none;
+      border: 0;
+  }
+
+#about-me2{
+    background-image: url("imgs/start-menu/about-me-menu.png");
+}
+
+#contact2{
+    background-image: url("imgs/start-menu/contact-menu.png");
+}
+
+#projects2{
+    background-image: url("imgs/start-menu/projects-menu.png");
+}
+
+#resume2{
+    background-image: url("imgs/start-menu/resume-menu.png");
+}
+
+#paint{
+    background-image: url("imgs/start-menu/paint-menu.png");
+}
+
+#cmd{
+    background-image: url("imgs/start-menu/CMD.png");
+}
+
+#shutdown{
+    background-image: url("imgs/start-menu/shutdown-menu.png");
+}
+
+
+.start_menu button:hover{
+    background-color: rgb(149, 179, 180);
+}
+
+  .start_menu{
+    font-size: 0;
+  }
+  @media only screen and (max-height: 500px) {
+    #resume {
+        position: absolute;
+        top: 0px;
+        left: 70px;
+    }
+  }
+  
+  @media only screen and (max-height: 320px){
+    #projects{
+        position: absolute;
+        top: 110px;
+        left: 70px;
+    }
+}
