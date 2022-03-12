@@ -1,2 +1,2 @@
-# ericaugusto.github.io
-Meu portfolio
+# Meu portfolio
+https://ericaugusto-git.github.io/ericaugusto.github.io/
