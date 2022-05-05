@@ -6,6 +6,10 @@
   /* for resize limits use min-width, min-height, max-width, max-height in css */
 }
 
+.modal-paint .ui-modal{
+  background-color: aliceblue;
+}
+
 .modal-contact .ui-modal {
   width: 30%;
   /* for resize limits use min-width, min-height, max-width, max-height in css */
@@ -45,6 +49,7 @@
 .ui-modal-header {
   background-color: #5b9bd5;
 }
+
 a{
   text-decoration: none !important;
 }

@@ -9,9 +9,11 @@ export class DesktopComponet implements OnInit{
   start = false
   @ViewChild("start_menu") start_menu: ElementRef;
   @ViewChild("start_btn") start_btn: ElementRef;
+  @ViewChild("shut") shut: ElementRef;
   matrix = false;
+  isShutdown = false;
   time = new Date().toLocaleString();
-  constructor () {}
+  constructor (private eRef: ElementRef) {}
   ngOnInit(): void {
     setInterval(() => {
       this.time = new Date().toLocaleString();
@@ -20,9 +22,13 @@ export class DesktopComponet implements OnInit{
 
   @HostListener('document:click', ['$event'])
   clickout(event) {
+    if(this.isShutdown){
+      if(this.shut.nativeElement.contains(event.target)){
+        this.isShutdown = false;
+      }
+    }
     if(this.start_menu){
       if(this.start_menu.nativeElement.contains(event.target) || this.start_btn.nativeElement.contains(event.target)) {
-        console.log("inside")
       } else {
         this.start = false;
       }
@@ -86,10 +92,12 @@ export class DesktopComponet implements OnInit{
     setInterval(matrix, 50);
   }
   onMatrix(event){
-    this.matrix = event;
+    this.matrix = !this.matrix;
     setTimeout(() => this.theMatrix(), 150)
   }
 
   shutdown(){
+    this.isShutdown = true;
+    this.matrix = false;
   }
 }

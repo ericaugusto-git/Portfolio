@@ -10,7 +10,6 @@ export class PaintComponent implements OnInit {
 
   constructor() { }
   public disabled = false;
-  // public color: ThemePalette = 'primary';
   public touchUi = false;
 
   public colorCtr: AbstractControl = new FormControl(null);
@@ -25,7 +24,7 @@ export class PaintComponent implements OnInit {
     // resize canvas when window is resized
     function resize() {
       ctx.canvas.width = window.innerWidth;
-      ctx.canvas.height = window.innerHeight;
+      ctx.canvas.height = window.innerHeight - 130;
     }
 
     // initialize position as 0,0
@@ -33,8 +32,8 @@ export class PaintComponent implements OnInit {
 
     // new position from mouse events
     function setPosition(e) {
-      pos.x = e.clientX;
-      pos.y = e.clientY;
+      pos.x = e.clientX - 15;
+      pos.y = e.clientY - 41;
     }
 
     function draw(e) {
@@ -43,7 +42,6 @@ export class PaintComponent implements OnInit {
 
       ctx.lineWidth = 10; // width of line
       ctx.lineCap = "round"; // rounded end cap
-      console.log(color)
       ctx.strokeStyle = color !== undefined ? color.value : '#000000'; // hex color of line
 
       ctx.moveTo(pos.x, pos.y); // from position
