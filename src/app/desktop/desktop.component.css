@@ -1,0 +1,135 @@
+div.bg-image{
+    background-image: url("../../assets/imgs/koi-wallpaper.png");
+    height: 100vh;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    background-color: #06213e;
+}
+
+#desktop-icons button, app-modal button{
+    width: 80px;
+    height: 80px;
+    background: none;
+    background-size: contain;
+    transition: transform .2s;
+    background-repeat:no-repeat;
+    background-position: center;
+}
+
+
+#desktop-icons button#about-me{
+    background-image: url("../../assets/imgs/btn-imgs/about-me.png");
+}
+#desktop-icons button#contact{
+    background-image: url("../../assets/imgs/btn-imgs/contact.png");
+}
+#desktop-icons button#projects{
+    background-image: url("../../assets/imgs/btn-imgs/projects.png");
+}
+#desktop-icons button#resume{
+    background-image: url("../../assets/imgs/btn-imgs/resume.png");
+}
+
+#footer button{
+    height: 30px;
+    width: 133px;
+    display: block;
+    background-image: url("../../assets/imgs/start.png");
+}
+
+#desktop-icons button:hover, app-modal button:hover{
+    transform: scale(1.1) !important;
+
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+.start_menu {
+    border-style: groove;
+    height: 320px;
+    width: 180px;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    font-size: 18px;
+    background-image: url("../../assets/imgs/start-menu/background.png");
+  }
+
+  .start_menu button{
+      margin-left: 30px;
+      height: 46px;
+      background: none;
+      border: 0;
+  }
+
+#about-me2{
+    background-image: url("../../assets/imgs/start-menu/about-me-menu.png");
+}
+
+#contact2{
+    background-image: url("../../assets/imgs/start-menu/contact-menu.png");
+}
+
+#projects2{
+    background-image: url("../../assets/imgs/start-menu/projects-menu.png");
+}
+
+#resume2{
+    background-image: url("../../assets/imgs/start-menu/resume-menu.png");
+}
+
+#paint{
+    background-image: url("../../assets/imgs/start-menu/paint-menu.png");
+}
+
+#cmd{
+    background-image: url("../../assets/imgs/start-menu/CMD.png");
+}
+
+#shutdown{
+    background-image: url("../../assets/imgs/start-menu/shutdown-menu.png");
+}
+
+app-modal #email-client{
+  background-image: url('../../assets/imgs/projects/email-client-icon.png');
+}
+app-modal #recipe-book{
+  background-image: url('../../assets/imgs/projects/recipe-book.png');
+}
+app-modal #finance{
+  background-image: url('../../assets/imgs/projects/finance-icon.png');
+}
+
+#my-img{
+  width: 100%;
+  height: 100%;
+}
+
+.start_menu button:hover{
+    background-color: rgb(149, 179, 180);
+}
+
+/* aqui é definida utilizando o seletor body a cor de fundo do documento, a fonte solicitada pela editora e o tamanho da fonte em todo o documento */
+  .start_menu{
+    font-size: 0;
+    padding: 0;
+  }
+  @media only screen and (max-height: 500px) {
+    #resume {
+        position: absolute;
+        top: 0px;
+        left: 70px;
+    }
+  }
+
+  @media only screen and (max-height: 320px){
+    #projects{
+        position: absolute;
+        top: 110px;
+        left: 70px;
+    }
+}
